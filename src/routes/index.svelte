@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { fly } from 'svelte/transition';
+
 	import Categories from '$lib/Categories.svelte';
 	import Animal from '$lib/Animal.svelte';
 	import Detail from '$lib/Detail.svelte';
@@ -29,7 +31,15 @@
 </script>
 
 {#if page === 'home'}
-	<div class="wrap">
+	<div
+		class="wrap"
+		transition:fly={{
+			y: 0,
+			x: -150,
+			opacity: 0.5,
+			duration: 250
+		}}
+	>
 		<h1>Browse</h1>
 		<div class="divider" />
 

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { fly } from 'svelte/transition';
 	import { createEventDispatcher } from 'svelte';
 	import { categories as _categories } from '$lib/data';
 
@@ -13,7 +14,10 @@
 	const dispatch = createEventDispatcher<{ back: undefined }>();
 </script>
 
-<div class="box">
+<div
+	class="box"
+	transition:fly={{ x: 500, opacity: 1, duration: 250 }}
+>
 	<img
 		src={_categories.find((x) => x.title === curr[0])?.image}
 		alt=""
