@@ -17,6 +17,7 @@
 
 <style>
 	.container {
+		scroll-snap-type: x mandatory;
 		overflow-x: scroll;
 		display: flex;
 		flex-shrink: 0;

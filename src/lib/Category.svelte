@@ -29,6 +29,7 @@
 	}
 
 	.box {
+		scroll-snap-align: start;
 		width: 100%;
 		flex-shrink: 0;
 		margin-left: -2rem;
