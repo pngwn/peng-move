@@ -27,6 +27,7 @@
 
 <style>
 	.container {
+		scroll-snap-type: x mandatory;
 		overflow-x: scroll;
 		display: flex;
 		flex-shrink: 0;
@@ -51,6 +52,7 @@
 	}
 
 	.box {
+		scroll-snap-align: start;
 		width: calc(50vw - 0.75rem);
 		flex-shrink: 0;
 	}
